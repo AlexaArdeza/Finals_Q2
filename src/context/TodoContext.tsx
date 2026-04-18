@@ -37,7 +37,10 @@ export const TodoProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       const response = await fetch(API_URL);
       if (response.ok) {
         const data = await response.json();
-        setTodos(data.map((t: any) => ({ ...t, createdAt: t.createdAt || Date.now() })));
+        setTodos(data.map((t: any) => ({ 
+          ...t, 
+          createdAt: t.createdAt ? new Date(t.createdAt).getTime() : Date.now() 
+        })));
         await verifyIntegrity(); // Verify on every fetch
       }
     } catch (error) {
@@ -71,7 +74,10 @@ export const TodoProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       });
       if (response.ok) {
         const newTodo = await response.json();
-        setTodos((prev) => [...prev, { ...newTodo, createdAt: Date.now() }]);
+        setTodos((prev) => [...prev, { 
+          ...newTodo, 
+          createdAt: newTodo.createdAt ? new Date(newTodo.createdAt).getTime() : Date.now() 
+        }]);
         await verifyIntegrity();
       }
     } catch (error) {
