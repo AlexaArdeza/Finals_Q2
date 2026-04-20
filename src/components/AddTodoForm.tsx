@@ -12,6 +12,7 @@ const AddTodoForm: React.FC = () => {
   const { addTodo, canAddMore } = useTodos();
   const navigate = useNavigate();
   const [isMining, setIsMining] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const calculateSimpleHash = async (text: string, nonce: number) => {
     const msgUint8 = new TextEncoder().encode(text + nonce);
