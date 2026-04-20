@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
-  const themes: ('light' | 'dark' | 'ocean' | 'forest')[] = ['light', 'dark', 'ocean', 'forest'];
+  const themes: ('light' | 'midnight' | 'emerald' | 'solarized')[] = ['light', 'midnight', 'emerald', 'solarized'];
 
   return (
     <div className="theme-toggle glass">

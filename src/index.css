@@ -9,51 +9,51 @@
   --card: rgba(255, 255, 255, 0.8);
   --text: #0f172a;
   --text-muted: #64748b;
-  --primary: #6366f1;
-  --primary-glow: rgba(99, 102, 241, 0.2);
-  --border: rgba(226, 232, 240, 0.8);
+  --primary: #4f46e5;
+  --primary-glow: rgba(79, 70, 229, 0.2);
+  --border: rgba(0, 0, 0, 0.1);
   --danger: #ef4444;
   --success: #22c55e;
+  --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.theme-midnight {
+  --bg: #020617;
+  --card: rgba(30, 41, 59, 0.5);
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary: #6366f1;
+  --primary-glow: rgba(99, 102, 241, 0.2);
+  --border: rgba(255, 255, 255, 0.1);
+  --danger: #f87171;
+  --success: #4ade80;
   --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 }
 
-.theme-dark {
-  --bg: #0f172a;
-  --card: rgba(30, 41, 59, 0.7);
-  --text: #f1f5f9;
-  --text-muted: #94a3b8;
-  --primary: #818cf8;
-  --primary-glow: rgba(129, 140, 248, 0.3);
-  --border: rgba(51, 65, 85, 0.8);
-  --danger: #f87171;
-  --success: #4ade80;
-  --gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-}
-
-.theme-ocean {
-  --bg: #001e3c;
-  --card: rgba(0, 45, 92, 0.7);
-  --text: #e2f1ff;
-  --text-muted: #94c1ff;
-  --primary: #38bdf8;
-  --primary-glow: rgba(56, 189, 248, 0.3);
-  --border: rgba(0, 75, 145, 0.8);
-  --danger: #ff6b6b;
-  --success: #2dd4bf;
-  --gradient: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%);
-}
-
-.theme-forest {
+.theme-emerald {
   --bg: #064e3b;
-  --card: rgba(6, 78, 59, 0.7);
+  --card: rgba(6, 95, 70, 0.5);
   --text: #ecfdf5;
   --text-muted: #6ee7b7;
-  --primary: #34d399;
-  --primary-glow: rgba(52, 211, 153, 0.3);
-  --border: rgba(6, 95, 70, 0.8);
+  --primary: #10b981;
+  --primary-glow: rgba(16, 185, 129, 0.2);
+  --border: rgba(255, 255, 255, 0.1);
   --danger: #f87171;
-  --success: #a7f3d0;
-  --gradient: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  --success: #34d399;
+  --gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+}
+
+.theme-solarized {
+  --bg: #fdf6e3;
+  --card: rgba(238, 232, 213, 0.8);
+  --text: #073642;
+  --text-muted: #586e75;
+  --primary: #268bd2;
+  --primary-glow: rgba(38, 139, 210, 0.2);
+  --border: rgba(0, 0, 0, 0.1);
+  --danger: #d32f2f;
+  --success: #859900;
+  --gradient: linear-gradient(135deg, #268bd2 0%, #d33682 100%);
 }
 
 * {
@@ -382,10 +382,10 @@ button {
   transform: scale(1.1);
 }
 
-.btn-light { background: #f1f5f9; }
-.btn-dark { background: #1e293b; }
-.btn-ocean { background: #004b91; }
-.btn-forest { background: #065f46; }
+.btn-light { background: #ffffff; border: 1px solid #e2e8f0; }
+.btn-midnight { background: #0f172a; }
+.btn-emerald { background: #10b981; }
+.btn-solarized { background: #eee8d5; border: 1px solid #073642; }
 
 /* Responsive */
 @media (max-width: 640px) {

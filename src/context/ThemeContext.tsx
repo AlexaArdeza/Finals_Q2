@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Theme = 'light' | 'dark' | 'ocean' | 'forest';
+type Theme = 'light' | 'midnight' | 'emerald' | 'solarized';
 
 interface ThemeContextType {
   theme: Theme;
@@ -23,7 +23,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   const toggleTheme = () => {
     setThemeState((prev) => {
-      const themes: Theme[] = ['light', 'dark', 'ocean', 'forest'];
+      const themes: Theme[] = ['light', 'midnight', 'emerald', 'solarized'];
       const nextIndex = (themes.indexOf(prev) + 1) % themes.length;
       return themes[nextIndex];
     });
